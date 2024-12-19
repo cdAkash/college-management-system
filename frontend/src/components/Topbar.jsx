@@ -42,7 +42,6 @@ const Topbar = () => {
         <div className="flex items-center gap-4 text-sm">
           <span className="text-muted-foreground">{currentTime}</span>
           <span className="text-muted-foreground">📞 +91 98765 43210</span>
-          <span className="text-muted-foreground">ID: CMS-1234</span>
         </div>
 
         {/* Actions */}
@@ -59,9 +58,6 @@ const Topbar = () => {
             ) : (
               <Sun className="w-4 h-4" />
             )}
-          </Button>
-          <Button variant="outline" className="text-xs">
-            Help
           </Button>
           <Button className="text-xs">Contact</Button>
         </div>
