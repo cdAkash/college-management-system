@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Spinner } from "@/components/ui/spinner";
+
 
 const GalleryImages = () => {
   const [images, setImages] = useState([]);
@@ -27,7 +27,7 @@ const GalleryImages = () => {
   }, []);
 
   if (loading) {
-    return <Spinner />;
+    return <p>Loading............</p>;
   }
 
   return (

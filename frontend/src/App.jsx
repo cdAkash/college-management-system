@@ -12,6 +12,7 @@ import Team from "@/pages/Team";
 import ForgotPasswordPage from "./pages/ForgotPassword";
 import ResetPasswordForm from "./components/ForgotPageComponents/ResetPasswordForm";
 import ProtectedRoute from "@/layouts/ProtectedRoute";
+import ContactUs from "@/pages/Contactus";
 // dashboards
 
 import AdminDashboardPage from "@/pages/DashBoard/AdminDashboardPage";
@@ -121,7 +122,15 @@ export default function App() {
                 <ResetPasswordForm />
               </MainLayout>
             }
-          />  
+          /> 
+          <Route
+            path="/contactus"
+            element={
+              <MainLayout>
+                <ContactUs />
+              </MainLayout>
+            }
+          /> 
 
           {/* DashboardLayout Routes */}
           <Route

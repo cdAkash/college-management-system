@@ -14,30 +14,36 @@ export function Footer() {
 
         <div className="flex justify-center space-x-6 mb-4">
           <a
-            href="#"
+            href="https://facebook.com"
             className="text-gray-400 hover:text-gray-200 transition duration-200"
             aria-label="Facebook"
+            target="_blank"
+        rel="noopener noreferrer"
           >
             Facebook
           </a>
           <a
-            href="#"
+            href="https://x.com"
             className="text-gray-400 hover:text-gray-200 transition duration-200"
             aria-label="Twitter"
+            target="_blank"
+        rel="noopener noreferrer"
           >
             Twitter
           </a>
           <a
-            href="#"
+            href="https://instagram.com"
             className="text-gray-400 hover:text-gray-200 transition duration-200"
             aria-label="Instagram"
+            target="_blank"
+        rel="noopener noreferrer"
           >
             Instagram
           </a>
         </div>
 
         <p className="text-sm">
-          © {new Date().getFullYear()} Your College Name. All Rights Reserved.
+          © {new Date().getFullYear()} IIT Anandapur. All Rights Reserved.
         </p>
       </div>
     </footer>

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button"; 
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 const Topbar = () => {
   const [currentTime, setCurrentTime] = useState("");
   const { theme, setTheme } = useTheme();
-
+  const navigate = useNavigate();
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
@@ -24,10 +24,10 @@ const Topbar = () => {
   }, []);
 
   return (
-    <div className="bg-background text-foreground border-b">
+    <div className="bg-background text-foreground border-b fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto flex items-center justify-between py-2 px-4">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 cursor-pointer" onClick={()=>navigate("/")}>
           <img
             src="/logo_msit.png" 
             alt="College Logo"
@@ -59,7 +59,9 @@ const Topbar = () => {
               <Sun className="w-4 h-4" />
             )}
           </Button>
-          <Button className="text-xs">Contact</Button>
+          <Button className="text-xs" onClick={() => navigate('/Contactus')}>
+            Contact
+          </Button>
         </div>
       </div>
     </div>

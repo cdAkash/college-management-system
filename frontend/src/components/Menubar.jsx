@@ -1,46 +1,49 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const Menubar = () => {
+  const navigate = useNavigate();
   return (
-    <nav className="bg-background shadow">
+    <nav className="bg-background shadow mt-16">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <ul className="flex items-center gap-6">
           <li>
             <a
-              href="/"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={()=>navigate("/")}
+              className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               Home
             </a>
           </li>
           <li>
             <a
-              href="/about"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={()=>navigate("/about")}
+              className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               About
             </a>
           </li>
           <li>
             <a
-              href="/departments"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              
+              onClick={()=>navigate("/departments")}
+              className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               Departments
             </a>
           </li>
           <li>
             <a
-              href="/team"
-              className="text-muted-foreground hover:text-primary transition-colors"
+          
+              onClick={()=>navigate("/team")}
+              className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               Team
             </a>
           </li>
           <li>
             <a
-              href="/gallery"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={()=>navigate("/gallery")}
+              className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               Gallery
             </a>
@@ -49,16 +52,16 @@ const Menubar = () => {
         <ul className="flex items-center gap-4">
           <li>
             <a
-              href="/login"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={()=>navigate("/login")}
+              className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               Login
             </a>
           </li>
           <li>
             <a
-              href="/signup"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={()=>navigate("/signup")}
+              className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               Register
             </a>

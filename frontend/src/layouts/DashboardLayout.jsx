@@ -57,7 +57,7 @@ const DashboardLayout = ({ sidebarConfig, children, user }) => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen mt-16">
       <aside className="w-80 bg-background text-foreground p-4 flex flex-col border overflow-x-hidden rounded-lg">
         <h1 className="text-2xl font-bold mb-6 text-center">Dashboard</h1>
         <div className="flex-grow overflow-y-auto">
