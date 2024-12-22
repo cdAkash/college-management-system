@@ -45,7 +45,7 @@ export default function AssignHOD() {
       setFormData({ email: "", deptId: "" }); // Reset form data
     } catch (err) {
       console.error("Error assigning HOD:", err);
-      setError("An error occurred while assigning the HOD.");
+      setError(err.message);
     } finally {
       setIsLoading(false); // Stop loading
     }

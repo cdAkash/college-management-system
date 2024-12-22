@@ -260,7 +260,8 @@ const assignHOD = asyncHandler(async (req, res) => {
                 {
                     HOD:hod?._id,
                 }
-        }
+        },
+        {new:true}
     )
     if(!result){
         throw new ApiError(400,"HOD assinging Failed")
