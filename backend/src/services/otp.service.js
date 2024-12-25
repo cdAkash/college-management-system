@@ -18,7 +18,7 @@ import {ApiError} from "../utils/ApiError.js"
 const transporter = nodemailer.createTransport({
     service:"gmail",
     auth:{
-        user:"juciepiladomausambika@gmail.com",
+        user:"useYourOwn@gmail.com",
         pass:process.env.OTP_KEY_PASS
     },
 });
