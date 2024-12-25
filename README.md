@@ -2,7 +2,7 @@ Sure, here is a comprehensive README file for your project, including all the in
 
 # College Management System
 
-##Live Demo
+## Live Demo
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://cms-frontend-nine-gamma.vercel.app/)
 
