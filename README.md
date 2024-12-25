@@ -2,6 +2,10 @@ Sure, here is a comprehensive README file for your project, including all the in
 
 # College Management System
 
+##Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://cms-frontend-nine-gamma.vercel.app/)
+
 Welcome to the College Management System! This project is designed to manage various administrative and academic functions of a college. Below are the detailed instructions to set up and run the project.
 
 ## Features
