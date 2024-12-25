@@ -23,3 +23,9 @@ NOTE: Dont forget to create a .env file in both frontend and backend folder and 
 
 There is Dockerfile provided which will help you install the face_recognition model without any worrying about depencies. Use chatGPT , for installing the Docker stuff.
 If you dont want to use docker there is a file called readThis.txt file where all the instruction is provided for installing for bothe windows and Linux systems.
+
+
+```
+https://cms-frontend-nine-gamma.vercel.app/
+```
+click this link to visit the frontend of the Project.
