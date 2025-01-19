@@ -37,7 +37,7 @@ const Menubar = () => {
               onClick={()=>navigate("/team")}
               className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
-              Team
+              Acheivements
             </a>
           </li>
           <li>

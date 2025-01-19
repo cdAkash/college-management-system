@@ -39,13 +39,32 @@ const Topbar = () => {
         </div>
 
         {/* Info */}
-        <div className="flex items-center gap-4 text-sm">
+        <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-4 text-sm">
           <span className="text-muted-foreground">{currentTime}</span>
+          <img
+            src="/admission.gif"
+            alt="College Logo"
+            className="h-14 w-50 cursor-pointer"
+            onClick={() => navigate("/")}
+          />
           <span className="text-muted-foreground">📞 +91 98765 43210</span>
         </div>
 
         {/* Actions */}
         <div className="flex items-center gap-2">
+        <Button className="text-xs" >
+        <a
+  href="https://msit.edu.in/assets/MsitVirtualTour/index.html"
+  target="_blank"
+  rel="noopener noreferrer"
+  
+>
+  360 Campus Tour
+</a>
+          </Button>
+          <Button className="text-xs" onClick={() => navigate('/Contactus')}>
+            Contact
+          </Button>
           <Button
             variant="outline"
             className="text-xs"
@@ -59,9 +78,7 @@ const Topbar = () => {
               <Sun className="w-4 h-4" />
             )}
           </Button>
-          <Button className="text-xs" onClick={() => navigate('/Contactus')}>
-            Contact
-          </Button>
+          
         </div>
       </div>
     </div>

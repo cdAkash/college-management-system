@@ -5,6 +5,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const items = [
+  { title: ".", image: "slider1.png" },  
+  { title: "..", image: "slider2.png" },
+  { title: "...", image: "slider3.png" },
 ];
 
 export function FullWidthCarousel() {

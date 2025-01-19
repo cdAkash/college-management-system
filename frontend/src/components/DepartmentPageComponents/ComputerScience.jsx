@@ -144,7 +144,7 @@ export default function ComputerScience() {
             { 
               name: "Dr. John Doe",
               designation: "Professor & HOD",
-              image: "/faculty1.jpg",
+              image: "/ankhi.jpg",
               specialization: "Machine Learning",
               email: "john.doe@college.edu"
             },
