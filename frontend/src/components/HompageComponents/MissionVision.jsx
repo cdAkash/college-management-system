@@ -11,7 +11,7 @@ const MissionVision = () => {
           <h2 className="text-2xl text-center font-semibold text-gray-800 dark:text-gray-200">
             Our Mission
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-gray-600 dark:text-gray-400 justify-content">
             To provide innovative and efficient solutions that empower businesses
             and individuals to achieve their goals with confidence and excellence.
             To provide innovative and efficient solutions that empower businesses
@@ -29,7 +29,7 @@ const MissionVision = () => {
           <h2 className="text-2xl text-center font-semibold text-gray-800 dark:text-gray-200">
             Our Vision
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-gray-600 dark:text-gray-400 justify-content">
             To be a global leader in delivering transformative technologies and
             fostering sustainable growth for a better tomorrow.To provide innovative and efficient solutions that empower businesses
             and individuals to achieve their goals with confidence and excellence.To provide innovative and efficient solutions that empower businesses
