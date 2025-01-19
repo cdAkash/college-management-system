@@ -31,10 +31,10 @@ const Topbar = () => {
           <img
             src="/logo_msit.png" 
             alt="College Logo"
-            className="h-10 w-10"
+            className="h-10 w-15"
           />
           <span className="font-semibold text-primary text-lg">
-            IIT-Anandapur
+            Meghnad Saha Institute of Technology
           </span>
         </div>
 

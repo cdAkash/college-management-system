@@ -7,7 +7,7 @@ const StaticImage = () => {
     <div
       className="relative w-full h-80"
       style={{
-        backgroundImage: "url('/b.jpg')", 
+        backgroundImage: "url('/slider1.jpg')", 
         backgroundSize: "cover",
         backgroundPosition: "center",
         opacity: 0.7,
