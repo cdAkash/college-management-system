@@ -34,7 +34,7 @@ const Topbar = () => {
             className="h-10 w-15"
           />
           <span className="font-semibold text-primary text-lg">
-            IIT-Anandapur
+            Meghnad Saha Institute of Technology
           </span>
         </div>
 

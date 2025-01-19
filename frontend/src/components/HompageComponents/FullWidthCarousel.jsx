@@ -5,21 +5,16 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const items = [
-  { title: "Slide 1", image: "b.jpg" },  
-  { title: "Slide 2", image: "coverImage.jpg" },
-  { title: "Slide 3", image: "b.jpg" },
-  { title: "Slide 4", image: "b.jpg" },
-  { title: "Slide 5", image: "b.jpg" },
 ];
 
 export function FullWidthCarousel() {
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
-      speed: 10,
+      speed: 5,
       align: "center",
     },
-    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+    [Autoplay({ delay: 5000, stopOnInteraction: false })]
   );
 
   return (
