@@ -7,7 +7,9 @@ import {ApiError} from "../utils/ApiError.js"
 // import Faculty from "../models/admin.faculty.js";
 // import HOD from "../models/admin.hod.js";
 // import Student from "../models/admin.student.js";
+import dotenv from "dotenv";
 
+dotenv.config();
 
 
 
@@ -18,7 +20,7 @@ import {ApiError} from "../utils/ApiError.js"
 const transporter = nodemailer.createTransport({
     service:"gmail",
     auth:{
-        user:"useYourOwn@gmail.com",
+        user:"oracleserver21@gmail.com",
         pass:process.env.OTP_KEY_PASS
     },
 });

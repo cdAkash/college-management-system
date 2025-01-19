@@ -3,7 +3,6 @@ import fs from "fs";
 import FormData from "form-data";
 import { ApiError } from "../utils/ApiError.js";
 
-
 // API URLs
 const FACE_ENCODING_URL = "http://127.0.0.1:5000/api/generate-encoding";
 const FACE_VERIFY_URL = "http://127.0.0.1:5000/api/verify-encoding";
@@ -35,7 +34,16 @@ const generateFaceEncoding = async (imagePath) => {
 
         return response.data.faceEncoding; // Return the face encoding
     } catch (error) {
-        throw new ApiError(500, `Face encoding failed: ${error.response?.data?.error || error.message}`);
+        if (error.response) {
+            // Server responded with a status other than 2xx
+            throw new ApiError(error.response.status, error.response.data.error || "Face encoding failed");
+        } else if (error.request) {
+            // Request was made but no response received
+            throw new ApiError(500, "No response received from API");
+        } else {
+            // Something else happened
+            throw new ApiError(500, `Face encoding failed: ${error.message}`);
+        }
     }
 };
 
@@ -48,7 +56,6 @@ const generateFaceEncoding = async (imagePath) => {
  * @throws {ApiError} - Throws an error if verification fails.
  */
 const verifyFaceEncoding = async (imagePath, referenceEncoding, threshold = 0.7) => {
-
     if (!fs.existsSync(imagePath)) {
         throw new ApiError(400, "Image file not found");
     }
@@ -91,11 +98,18 @@ const verifyFaceEncoding = async (imagePath, referenceEncoding, threshold = 0.7)
             stack: error.stack,
         });
 
-        // Include API-specific error or fallback to general message
-        throw new ApiError(500, `Face verification failed: ${error.response?.data?.error || error.message}`);
+        if (error.response) {
+            // Server responded with a status other than 2xx
+            throw new ApiError(error.response.status, error.response.data.error || "Face verification failed");
+        } else if (error.request) {
+            // Request was made but no response received
+            throw new ApiError(500, "No response received from API");
+        } else {
+            // Something else happened
+            throw new ApiError(500, `Face verification failed: ${error.message}`);
+        }
     }
 };
-
 
 /**
  * Verifies a face and returns a boolean result.
@@ -107,7 +121,6 @@ const verifyFaceEncoding = async (imagePath, referenceEncoding, threshold = 0.7)
 const verifyAndRespond = async (imagePath, referenceEncoding, threshold = 0.7) => {
     try {
         const { isMatch } = await verifyFaceEncoding(imagePath, referenceEncoding, threshold);
-        // console.log(isMatch)
         return isMatch;
     } catch (error) {
         console.error(`Error during face verification: ${error.message}`);
