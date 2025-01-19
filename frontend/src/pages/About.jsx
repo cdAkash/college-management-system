@@ -13,9 +13,9 @@ return(
     <StaticImage/>
     <Overview/>
     <MissionVission2/>
-    <Director/>
-    <ManageDirector/>
     <Bog/>
+    <ManageDirector/>
+    <Director/>
     </div>
 );
 }

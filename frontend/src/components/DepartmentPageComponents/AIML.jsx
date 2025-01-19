@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function ComputerScience() {
+export default function AIML() {
   return (
     <div className="container mx-auto p-4">
       {/* Header Section */}
