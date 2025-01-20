@@ -7,7 +7,7 @@ export default function BasicSciences() {
     <div className="container mx-auto p-4">
       {/* Header Section */}
       <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-300 mb-8">
-        Computer Science Department
+        Basic Science Department
       </h1>
 
       {/* Department Image */}

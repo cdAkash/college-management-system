@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 import MainLayout from "@/layouts/MainLayout";
 import Homepage from "@/pages/Homepage";
 import About from "@/pages/About";
-import Departments from "@/pages/Departments";
+import DepartmentPage from "@/pages/Departments";
 import Gallery from "@/pages/Gallery";
 import LoginPage from "@/pages/Login";
 import SignupPage from "@/pages/Signup";
@@ -68,10 +68,10 @@ export default function App() {
             }
           />
           <Route
-            path="/departments"
+            path="/departments/:department"
             element={
               <MainLayout>
-                <Departments />
+                <DepartmentPage />
               </MainLayout>
             }
           />
