@@ -46,9 +46,9 @@ export function DeptCards() {
   }, [emblaCSBS, updateButtons]);
 
   const departments = [
-    { id: 1, name: "Computer Application", images: ["/nba.png", "/a.jpg", "/nba.png"] },
-    { id: 2, name: "B.Tech", images: ["/nba.png", "/nba.png", "/nba.png"] },
-    { id: 3, name: "CSBS", images: ["/nba.png", "/nba.png", "/nba.png"] },
+    { id: 1, name: "B.Tech", images: ["/btech2.jpeg", "/btech1.jpg", "/btech3.jpeg"] },
+    { id: 2, name: "M.Tech", images: ["/mtech1.jpg", "/mtech2.jpg", "/mtech3.jpg"] },
+    { id: 3, name: "Computer Application", images: ["/ca1.jpg", "/ca2.jpg", "/ca3.jpg"] }
   ];
 
   return (
