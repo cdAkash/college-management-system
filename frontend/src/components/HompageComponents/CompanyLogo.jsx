@@ -8,15 +8,18 @@ export default function CompanyLogo() {
   const containerRef = useRef(null)
 
   const logos = [
-    { name: "Company 1", logo: "/logo_msit.png" },
-    { name: "Company 2", logo: "/logo_msit.png" },
-    { name: "Company 3", logo: "/logo_msit.png" },
-    { name: "Company 4", logo: "/logo_msit.png" },
-    { name: "Company 5", logo: "/logo_msit.png" },
-    { name: "Company 6", logo: "/logo_msit.png" },
-    { name: "Company 1", logo: "/logo_msit.png" },
-    { name: "Company 2", logo: "/logo_msit.png" },
-    { name: "Company 3", logo: "/logo_msit.png" }, 
+      { name: "Accenture", logo: "./company/Accenture.png" },
+      { name: "Amazon", logo: "./company/Amazon.png" },
+      { name: "Amdocs", logo: "./company/Amdocs.png" },
+      { name: "Capgemini", logo: "./company/Capgemini.png" },
+      { name: "Clinisys", logo: "./company/clinisys.png" },
+      { name: "Cognizant", logo: "./company/Cognizant.png" },
+      { name: "Deloitte", logo: "./company/Deloitte_Logo.png" },
+      { name: "EPAM", logo: "./company/EPAM.png" },
+      { name: "Microsoft", logo: "./company/Microsoft.png" },
+      { name: "NASSCOM", logo: "./company/NASSCOM.png" },
+      { name: "Tata Consultancy Services", logo: "./company/Tata_Consultancy_Services.png" },
+      { name: "Wipro", logo: "./company/wipro.png" }
   ]
 
   const animate = () => {
@@ -42,7 +45,7 @@ export default function CompanyLogo() {
     <section className="w-full py-12 bg-white dark:bg-gray-950 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 mb-8">
         <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100">
-          Our Alumni Work At
+          Top Recruiters 
         </h2>
       </div>
 
@@ -60,7 +63,7 @@ export default function CompanyLogo() {
             transition: isPaused ? 'none' : 'transform 0.02s linear'
           }}
         >
-          {logos.map((company, index) => (
+          {logos.concat(logos).map((company, index) => (
             <div
               key={`${company.name}-${index}`}
               className="flex-shrink-0 w-[250px] h-[100px] flex items-center justify-center"

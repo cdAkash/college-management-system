@@ -6,50 +6,50 @@ export default function TeamPage() {
   const teacherAchievements = [
     {
       category: "Teacher",
-      date: "2023",
-      title: "Best Research Paper Award",
-      description: "Dr. Sarah Wilson received the Best Research Paper Award at the International Conference on Advanced Technology for her groundbreaking work in AI.",
+      date: "2024",
+      title: "Certificate presentation by Prof. (Dr.) S M Chatterjee, Chairman, BOG",
+      description: "Certificate presentation to Shreyoshi Chakraborty and Sribanti Chakraborty, students of ECE 3rd year, 6th semester by Prof. (Dr.) S M Chatterjee, Chairman, BOG, for their excellent academic performance in the 5th semester of MAKAUT.",
       author: {
-        name: "Dr. Sarah Wilson",
-        image: "/placeholder.svg"
+        name: "",
+        image: ""
       },
-      image: "/sher.jpg"
+      image: "/ta1.jpg"
     },
     {
       category: "Teacher",
-      date: "2023",
-      title: "Excellence in Teaching",
-      description: "Prof. Mike Johnson received the Excellence in Teaching Award for his innovative teaching methods in Computer Science.",
+      date: "2020",
+      title: " IDEATE 2020",
+      description: "IEEE COMSOC MSIT SBC, in association with IEEE EDS MSIT SBC and the Department of ECE, MSIT organized IDEATE 2020 on February 14, 2020 at the Seminar hall of the college. The program was attended by over 80 participants. All participating students benefited immensely from the interactive program.",
       author: {
-        name: "Prof. Mike Johnson",
-        image: "/placeholder.svg"
+        name: "",
+        image: ""
       },
-      image: "/sher.jpg"
+      image: "/ta2.jpg"
     }
   ];
 
   const studentAchievements = [
     {
       category: "Student",
-      date: "2023",
-      title: "National Coding Championship",
-      description: "John Smith won first place in the National Coding Championship, representing our college against 500+ participants.",
+      date: "2020",
+      title: "27th West Bengal State Science & Technology Congress, 2020",
+      description: "Students of ECE Department are representing MSIT at 27th West Bengal State Science & Technology Congress, 2020 at Science City. Two project prototypes from ECE department,MSIT are selected for presentation in this prestigious event of Government of West Bengal.",
       author: {
-        name: "John Smith",
-        image: "/placeholder.svg"
+        name: "",
+        image: ""
       },
-      image: "/sher.jpg"
+      image: "/sta1.jpg"
     },
     {
       category: "Student",
-      date: "2023",
-      title: "International Research Grant",
-      description: "Kate Adie secured a prestigious international research grant for her work in sustainable technology.",
+      date: "2020",
+      title: "Explora 2020",
+      description: "Congratulations of Sagnik Dutta Gupta and Arindam Ghorai of EE Department, MSIT for their AGROTECH which was show cased in the event Explora 2020 , funded by TEQIP and organized by MAKAUT on National Science Day. The idea took shape under the mentorship of Mr. Kaustuv Dasgupta and Mr. Gautam Banerjee",
       author: {
-        name: "Kate Adie",
-        image: "/placeholder.svg"
+        name: "",
+        image: ""
       },
-      image: "/sher.jpg"
+      image: "/saa2.jpg"
     }
   ];
 
@@ -73,8 +73,8 @@ export default function TeamPage() {
           </div>
           <div className="flex items-center gap-2">
             <Avatar className="h-10 w-10">
-              <AvatarImage alt={achievement.author.name} src={achievement.author.image} />
-              <AvatarFallback>{achievement.author.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+              {/* <AvatarImage alt={achievement.author.name} src={achievement.author.image} /> */}
+              {/* <AvatarFallback>{achievement.author.name.split(' ').map(n => n[0]).join('')}</AvatarFallback> */}
             </Avatar>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>{achievement.author.name}</span>
@@ -113,8 +113,8 @@ export default function TeamPage() {
           </div>
           <div className="flex items-center gap-2">
             <Avatar className="h-10 w-10">
-              <AvatarImage alt={achievement.author.name} src={achievement.author.image} />
-              <AvatarFallback>{achievement.author.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+              {/* <AvatarImage alt={achievement.author.name} src={achievement.author.image} /> */}
+              {/* <AvatarFallback>{achievement.author.name.split(' ').map(n => n[0]).join('')}</AvatarFallback> */}
             </Avatar>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>{achievement.author.name}</span>
@@ -131,7 +131,7 @@ export default function TeamPage() {
 
   return (
     <div className="container mx-auto py-12 px-4">
-      <h1 className="text-3xl font-bold text-center mb-12">Our Achievements</h1>
+      {/* <h1 className="text-3xl font-bold text-center mb-12">Our Achievements</h1> */}
       
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-6 text-center">Teacher Achievements</h2>

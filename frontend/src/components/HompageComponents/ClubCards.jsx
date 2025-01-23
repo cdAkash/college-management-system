@@ -6,23 +6,23 @@ export function ClubCards() {
   const clubs = [
     {
       id: 1,
-      name: "Coding Club",
-      images: ["/nba.png", "/a.jpg", "/nba.png"],
+      name: "Megatronix (Tech)",
+      images: ["/mega4.jpeg", "/mega1.jpeg", "/mega2.jpeg", "/mega3.jpeg"],
     },
     {
       id: 2,
-      name: "Robotics Club",
-      images: ["/nba.png", "/a.jpg", "/nba.png"],
+      name: "Yuva (Cultural)",
+      images: ["/yuva1.jpg", "/yuva2.jpg", "/yuva3.jpg", "/yuva4.jpg"],
     },
     {
       id: 3,
-      name: "Music Club",
-      images: ["/nba.png", "/a.jpg", "/nba.png"],
+      name: "Sargam (Music)",
+      images: ["/sar1.jpg", "/sar2.jpg", "/sar3.jpg"],
     },
     {
       id: 4,
-      name: "Photography Club",
-      images: ["/nba.png", "/a.jpg", "/nba.png"],
+      name: "Rotaract (Social)",
+      images: ["/ro1.jpg", "/ro2.jpg", "/ro3.jpg", "/ro4.jpg"],
     },
   ];
 
