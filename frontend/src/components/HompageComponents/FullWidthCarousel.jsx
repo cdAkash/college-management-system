@@ -5,7 +5,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const items = [
-  { title: "Celebrating 25 years of excellence", image: "slider2.png" },
+  { title: "Celebrating 25 years of excellence", image: "25years.png" },
+  { title: "NBA Accredited", image: "slider2.png" },
   { title: "Dr. APJ Abdul Kalam Sir with MSIT students", image: "slider1.png" },  
   { title: "Smart India Hackathon winning Team", image: "slider3.png" },
 ];
