@@ -1,5 +1,5 @@
-# Use Node.js LTS version as the base image
-FROM node:18-alpine as base
+# Use Node.js 20 as the base image
+FROM node:20-alpine as base
 
 # Install necessary tools
 RUN apk add --no-cache supervisor
@@ -17,6 +17,9 @@ RUN npm ci  # This includes dev dependencies needed for building
 
 # Copy frontend source code
 COPY frontend/ ./
+
+# Install Vite and React plugin explicitly
+RUN npm install --save-dev @vitejs/plugin-react vite
 
 # Build frontend production assets
 RUN npm run build || echo "No build script found, assuming static frontend"
@@ -37,7 +40,7 @@ FROM base
 
 # Set environment variables
 ENV NODE_ENV=production
-ENV PORT=8080
+ENV PORT=10000
 ENV FRONTEND_PORT=3000
 
 # Copy frontend from frontend-build stage
@@ -59,7 +62,7 @@ WORKDIR /app
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Expose ports
-EXPOSE 8080 3000
+EXPOSE 10000 3000
 
 # Start supervisord to manage both services
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
