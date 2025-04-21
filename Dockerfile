@@ -30,7 +30,7 @@ RUN npm run build
 # Build backend
 FROM base as backend-build
 WORKDIR /app/backend
-
+ENV NODE_OPTIONS=--max-old-space-size=4096
 # Copy backend package files and install dependencies
 COPY backend/package*.json ./
 RUN npm ci
