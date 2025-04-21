@@ -13,12 +13,12 @@ WORKDIR /app/frontend
 
 # Copy frontend package files and install dependencies
 COPY frontend/package*.json ./
-RUN npm ci
+RUN npm ci  # This includes dev dependencies needed for building
 
 # Copy frontend source code
 COPY frontend/ ./
 
-# Build frontend production assets (if using Create React App or similar)
+# Build frontend production assets
 RUN npm run build || echo "No build script found, assuming static frontend"
 
 # Build backend
@@ -27,7 +27,7 @@ WORKDIR /app/backend
 
 # Copy backend package files and install dependencies
 COPY backend/package*.json ./
-RUN npm ci
+RUN npm ci  # This includes dev dependencies
 
 # Copy backend source code
 COPY backend/ ./
@@ -46,10 +46,16 @@ COPY --from=frontend-build /app/frontend /app/frontend
 
 # Copy backend files with production dependencies
 COPY --from=backend-build /app/backend /app/backend
+
+# Install production dependencies in the final image
 WORKDIR /app/backend
 RUN npm ci --only=production
+WORKDIR /app/frontend
+RUN npm ci --only=production
+RUN npm install -g serve
 
 # Setup supervisor to manage both services
+WORKDIR /app
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Expose ports
